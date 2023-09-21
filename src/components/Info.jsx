@@ -1,17 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { formatPrice } from './formatprice'
+import { useThemeContext } from '../themeContext'
 
 const Info = () => {
-  const [data,setData]=useState([])
+const {data}=useThemeContext()
   const [max,setMax]=useState(0)
-  useEffect(()=>{
-    const fetchData=async ()=>{
-      const response=await fetch("http://localhost:3001/data")
-      const got= await response.json();
-      setData(got)
-    }
-    fetchData()
-  },[])
   useEffect(()=>{
     const prices=data.map(d=>{
      return Number(d.sell)==0?0:Number(d.sell)

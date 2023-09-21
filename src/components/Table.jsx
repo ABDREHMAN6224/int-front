@@ -1,16 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { difference, formatPrice } from './formatprice'
+import { useThemeContext } from '../themeContext'
 
 const Table = () => {
-  const [data,setData]=useState([])
-  useEffect(()=>{
-    const fetchData=async ()=>{
-      const response=await fetch("http://localhost:3001/data")
-      const got= await response.json();
-      setData(got)
-    }
-    fetchData()
-  },[data])
+const {data}=useThemeContext()
+  
   if(data.length==0){
     return <div className="loading"></div>
   }
