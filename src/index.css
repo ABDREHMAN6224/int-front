@@ -294,6 +294,12 @@ tr {
   background: transparent;
 }
 
+@media (max-width:565px) {
+  .telegram-btn {
+    display: none;
+  }
+}
+
 @media (max-width:990px) {
   .nav-btn-container {
     display: none;
