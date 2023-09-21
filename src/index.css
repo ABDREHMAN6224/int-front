@@ -277,7 +277,7 @@ td {
   text-align: center;
   padding: 10px;
   letter-spacing: 1px;
-  color: white;
+  color: var(--text-color);
   font-weight: bold;
   font-size: 1rem;
 }
