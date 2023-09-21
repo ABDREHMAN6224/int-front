@@ -293,3 +293,22 @@ tr {
 .head {
   background: transparent;
 }
+
+@media (max-width:990px) {
+  .nav-btn-container {
+    display: none;
+  }
+
+  .statistics {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .table-container {
+    overflow-x: scroll;
+  }
+
+  .table-container::-webkit-scrollbar {
+    display: none;
+  }
+
+}
